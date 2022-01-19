@@ -16,3 +16,14 @@ console.log("Hello world");
  * terhadap titik koma. Sifatnya tidak wajib, jadi boleh
  * menggunakan titik koma maupun tidak menggunakannya.
  */
+
+/**
+ * Escape Sequence
+ * 
+ * \n menjadi ENTER
+ * \t menjadi TAB
+ * \' menjadi '
+ * \" menjadi "
+ * \* menjadi *
+ * \\ menjadi \
+ */
