@@ -13,4 +13,5 @@ Source    : https://w3schools.com/
 
 * Hello World
 * Variables
-* soon
+* Operators
+* Soon :D
