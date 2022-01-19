@@ -24,3 +24,4 @@ let nameVar = "value";
  *   tidak dapat digunakan sebagai nama
  * 
  */
+console.log(nameVar);
