@@ -1,0 +1,968 @@
+1.	hello world
+	titik koma =>
+		opsional (;)
+	komentar =>
+		// single line
+		/*
+		multi line
+		comment
+		*/
+	console =>
+		debug: detail
+		info: informasi
+		log: sama seperti info
+		table: bentuk table
+		warn: informasi peringatan
+		error: informasi error
+2.	tipe data number
+	- number notation =>
+		binary		: 0b10101
+		hexadecimal	: 0xFF
+		octal		: 0o10
+	- tipe data boolean =>
+		true/false
+	- tipe data string =>
+		text/karakter, menggunakan (" ", ' ')
+		menambah string: menggunakan operator (+)
+		escape sequence: karakter khusus, ENTER, TAB, KUTIP DUA/SATU
+3.	variable
+	- tempat menyimpan data
+	- kata kunci var/let/const
+	- cara penulisan:
+		var nameVar;
+		Format:
+			- Camelcase
+			- tidak diawali angka
+			- tidak diawali kapital
+	- mengubah value:
+		let nameLengkap;
+		
+		nameLengkap = "nilai yang diganti"
+		diikuti dengan tanda (=)
+	- mengakses variable
+	- kata kunci let =>
+		kata kunci var diganti dengan let
+		nilainya bisa diubah ubah
+	- kata kunci const =>
+		nilainya konstant / tidak bisa diubah ubah
+4. operator
+	- operator aritmatika =>
+		pertambahan (+)
+		pengurangan (-)
+		perkalian (*)
+		pembagian (/)
+		perpangkatan (**)
+		modulus (%)
+		menggabungkan 2 tipe data:
+			let nameVar = 90;
+			nameVar = nameVar + 10;
+	- operator augmented assignment =>
+		jika melakukan operasi dengan dirinya sendiri
+		contoh: result += 10
+	- operator unary =>
+		nilai positif +
+		nilai negatif -
+		increment ++
+		decrement --
+	- operator perbandingan =>
+		membandingkan 2 buah data
+		menghasilkan nilai boolean
+		lebih dari >
+		kurang dari <
+		lebih dari sama dengan >=
+		kurang dari sama dengan <=
+		sama dengan ==
+		sama dengan & sama tipe ===
+		tidak sama dengan !=
+		tidak sama dengan & tidak sama tipe !==
+	- operator logika =>
+		untuk tipe data boolean
+		and/dan (&&) =>
+			kedua nilai harus true maka hasilnya true
+			jika salah satu ada false, maka hasilnya false
+			jika keduanya false, maka hasilnya false
+		or/atau (||) =>
+			kedua nilai bernilai true, maka hasilnya true
+			jika salah satu ada true, hasilnya tetep true
+			jika keduanya false, maka hasilnya false
+		kebalikan ! =>
+			jika nilanya true, hasilnya false
+			jika nilanya false, hasilnya true
+5. string template =>
+	- subsitusi data dari luar string ke dalam string tanpa harus keluar
+	  dari string nya menggunakan backtick (`)
+	  contoh:
+		let strTmplt = 10;
+		console.info(`Isi data: ${strTmplt}`);
+	- expression:
+	  const template = `Name: ${name}, Lulus: ${nilai > 80}`;
+	- multiline string
+		let mltString = `
+		tambahkan enter
+		bisa untuk beberapa
+		line sekaligus.
+		`;
+6. konversi string & number =>
+	parseInt(string)	konversi string ke number(bilangan bulat)
+	parseFloat(string)	konversi string ke number(bilangan pecahan)
+	Number(string)		konversi string ke number(bulat/pecahan)
+	number.toString()	konversi number ke string
+	
+	- NaN
+	  jika data string yang di konversi tidak valid, maka hasilnya
+	  NaN(Not a Number)
+	  jika NaN dioperasikan dengan NaN lagi, hasilnya akan NaN lagi
+	- isNaN() function
+	  untuk mengecek NaN
+	  hasilnya boolean
+7. Array =>
+	tipe data yang berisi kumpulan data
+	- membuat array:
+		let arrayKosong = [];
+		
+		let arrayName = ["Nur", "Arifin", 10];
+	- cara kerja array:
+		setiap menambah data ke array, maka disimpan diurutan terakhir
+		urutan di array disebut index dimulai dari 0
+		panjang array disebut length
+	- menambah index array:
+		contoh:
+			let names = [];
+			names.push("Nur");
+			names.push("Nur", 10, "Arifin");
+			
+			// untuk melihat gunakan table:
+			console.table(names);
+	- operasi di array
+		array.push(value)		menambah data
+		array.length			mendapat panjang array
+		array[index]			mendapat posisi index
+		array[index] = value	mengubah data index
+		delete array[index]		menhapus data index, namun posisi tidak bergeser
+8. Object =>
+	bisa menggunakan number/string
+	index di object disebut properties/attribute
+	- membuat object kosong:
+		let objectKosong = {};
+	- mengubah properties/attribute:
+		// menambah/mengubah
+		objectKosong["nama"] = "Nur Arifin";
+		objectKosong["nama"] = "ipincamp";
+		objectKosong["umur"] = 20;
+		
+		// menghapus
+		delete objectKosong["umur"];
+	- membuat object dengan properties/attribute:
+		const orang = {
+			nama: "ipincamp",
+			"Nama Lengkap" : "Nur Arifin",
+			alamat: "Indonesia",
+			umur: 20
+		};
+	- mengakses properties/attribute:
+		console.info(`Nama: ${orang.nama}`);
+		console.info(`Nama Lengkap: ${orang["Nama Lengkap"]}`);
+9. If expression =>
+	percabangan, hasilnya boolean
+	If =>
+		format:
+			const nilai = 10;
+			
+			if (nilai > 8) {
+				console.info("Anda Lulus!");
+			}
+	Else =>
+		format:
+			const nilaiAkhir = 80;
+			
+			if (nilaiAkhir > 80) {
+				console.info("Anda Lulus!");
+			} else {
+				console.info("Maaf, Anda tidak lulus :(");
+			}
+	Else If expression =>
+	misal butuh beberapa cabang lagi
+	format:
+		if (nilai > 8) {
+			console.info("Selamat!");
+		} else if (nilai >= 8) {
+			console.info("Selamat anda lulus dengan nilai pas pasan");
+		} else {
+			console.info("Silahkan coba lagi tahun depan");
+		}
+10. Alert, Prompt & Confirm =>
+	alert peringatan:
+		alert("Hello World");
+	prompt input user:
+		let name = prompt("Who are you?");
+		
+		alert(`Hello ${name}`);
+	confirm input user(boolean):
+		let masuk = confirm("Anda yakin?");
+		
+		if (masuk) {
+			let name = prompt("Who are you?");
+		
+			alert(`Hello ${name}`);
+		} else {
+			alert("Bye...");
+		}
+11. Undefined =>
+	sebuah kata kunci
+	sebuah tipe data
+	sebuah variable yang belum di definisikan/belum menambahkan nilai
+	format:
+		let name;
+		// variable kosong disebut juga undefined
+		if (name == undefined) {
+			console.info("Data belum bernilai");
+		} else {
+			console.info(name);
+		}
+	- undefined array value:
+	const name = ["kosong", "yah"];
+		if (name[2] == undefined) {
+			console.info("Data belum bernilai");
+		} else {
+			console.info(name[2]);
+		}
+12. Null =>
+	representasi data kosong
+	sudah di definisikan, namun value nya kosong/null
+	format:
+		let name = null;
+		
+		if (name === undefined) {
+			console.info("Data belum bernilai");
+		} else if(name === null) {
+			console.info("Null");
+		} else {
+			console.info(name);
+		}
+13. Switch Statement =>
+	sama seperti if statement, namun lebih sederhana
+	format:
+		switch (nilai) {
+			case "A":
+				console.info("logs");
+				break;
+			case "B":
+			case "C":
+				console.info("logs");
+				break;
+			case "D":
+			default:
+				console.info("logs");
+		}
+14. typeof =>
+	digunakan untuk mengetahui tipe data sebuah value/variable
+	format:
+		let data;
+		
+		const dataType = typeof data;
+		console.log(dataType);
+15. in operator =>
+	untuk mengecek properti/index di object/array
+	hasilnya boolean
+	format:
+		const person = {
+			firstName: "Nur",
+			lastName: "Arifin"
+		};
+		
+		if ("firstName" in person) {
+			console.info(`Hello ${firstName}!`);
+		} else {
+			console.info("Hello");
+		}
+	hanya mengecek properti/index saja, tidak dengan value nya
+	jika value nya null/undefined tetap dianggap true
+16. Ternary operator =>
+	kondisi sederhana dari if statement
+	terdiri dari kondisi yang di evaluasi, jika menghasilkan true maka
+	nilai pertama yang diambil, jika false, nilai kedua yang diambil
+	format:
+		const nilai = 100;
+		const ucapan = nilai >= 80 ? "Selamat Anda Lulus" : "Anda Tidak Lulus";
+		
+		console.info(ucapan);
+17. Nullish Coalescing Operator =>
+	nullish value adalah null & undefined
+	format:
+		let parameter; // null/undefined
+		
+		let data = parameter ?? "Nilai Default";
+		
+		console.log(data);
+18. Optional Chaining =>
+	mengamankan ketika ingin mengakses properti sebuah object dari data nullish
+	jika kita mencoba mengakses data nullish tanpa optional chaining, maka error
+	format:
+		let person = {};
+		
+		console.info(person?.address?.country);
+19. Falsy & Truthy
+	value yang ketika dalam konteks boolean, dia anggap false
+	data yang dianggap falsy:
+		false		boolean false
+		0, -0		number 0 dan -0 dianggap false
+		"", '', ``	string kosong dianggap false
+		null		null dianggap false
+		undefined	undefined dianggap false
+		NaN			Not a Number dianggap false
+	data yang dianggap truthy kebalikannya falsy
+20. Operator logika di non boolean =>
+	- operator OR (||)
+		membaca dari kiri ke kanan
+		mengambil nilai pertama yang truthy
+		jika tidak ada satupun yang bernilai truthy, maka yang terakhir diambil
+	- operator AND (&&)
+		membaca dari kiri ke kanan
+		mengambil nilai pertama yang falsy
+		jika tidak ada satupun yang bernilai truthy, maka yang terakhir diambil
+21. For Loop =>
+	for:
+		kata kunci yang digunakan untuk melakukan perulangan
+		block kode di dalam for akan selalu diulangi selama terpenuhi
+		format:
+			for (init statement; kondisi; post statement) {
+				// block kode
+			}
+			
+			/*
+			init statement: diekseskusi hanya sekali 
+			kondisi: dilakukan pengecekan setiap perulangan, jika true akan dilakukan
+					 jika false maka berhenti
+			post statement: setiap kali akhir perulangan
+			*/
+			
+			for (; name <= 10;) {
+				console.info(`Perulangan ke ${name}`);
+				name++;
+			}
+			
+			for (let name = 1; name <= 10;) {
+				console.info(`Perulangan ke ${name}`);
+				name++;
+			}
+			
+			for (let name = 1; name <= 10; name++) {
+				console.info(`Perulangan ke ${name}`);
+			}
+22. While Loop =>
+	lebih sederhana dari for
+	hanya terdapat kondisi
+	format:
+		let name = 1;
+		
+		while (name <= 10) {
+			console.info(`Perulangan ke ${name}`);
+			name++
+		}
+23. Do While Loop =>
+	mirip dengan while
+	perbedaannya hanya pada pengecekan kondisi
+	pengecekan kondisi di while loop dilakukan diawal sebelum perulangan,
+	sedangkan do while loop dilakukan setelah perulangan
+	oleh karena itu, minimal sekali perulangan dilakukan,
+	walaupun tidak bernilai true
+	format:
+		let name = 1;
+		do {
+			console.info("Hello");
+			name++
+		}
+		while (name <= 10)
+24. Break & Continue =>
+	break: digunakan untuk menghentikan seluruh perulangan
+	continue: digunakan untuk menghentikan perulangan saat ini,
+			  lalu melanjutkan perulangan selanjutnya
+	contoh break:
+		let counter = 1;
+		
+		while (true) {
+			console.info(`Perulangan ke ${counter}`);
+			counter++;
+			
+			if (counter > 10) {
+				break;
+			}
+		}
+	contoh continue:
+		for (let i = 1; i < 10; i++) {
+			if (i % 2 === 0) {
+				continue;
+			}
+			console.info(`Perulangan Ganjil ${i}`);
+		}
+25. Label =>
+	penanda yang bisa digunakan dengan kata kunci break & continue
+	kita bisa melakukan break & continue terhadap perulangan yang kita inginkan,
+	asalkan perulangan nya kita gunakan label
+	format:
+		loopi:
+		for (let i = 0; i < 100; i++) {
+			loopj:
+			for (let j = 0; j < 10; j++) {
+				console.info(`${i} - ${j}`);
+			}
+		}
+	continue & break di label
+	format:
+		loopi:
+		for (let i = 0; i < 10; i++) {
+			loopj:
+			for (let j = 0; j < 100; j++) {
+				if (j > 10) {
+					continue loopi;
+				}
+				console.info(`${i} - ${j}`);
+			}
+		}
+26. For In =>
+	merupakan perulangan for yang digunakan untuk mengiterasi,
+	seluruh data properti di object
+	format:
+		const person = {
+			firstName: "Nur",
+			lastName: "Arifin"
+		};
+		
+		for (const property in person) {
+			console.info(`Properti ${property} : ${person[property]});
+		}
+27. For Of =>
+	merupakan digunakan untuk mengiterasi isi value, seperti array, string
+	for of tidak bisa untuk melakukan iterasi data di object, karena
+	object bukanlah iterable
+	format:
+		const names = ["Nur", "Arifin", 20];
+		
+		for (const name of names) {
+			console.info(`${name}`);
+		}
+		
+		// String
+		const fullName = "Nur Arifin";
+		
+		for (const character of fullName) {
+			console.info(`${character}`);
+		}
+28. With statement =>
+	digunakan untuk menurunkan sebuah scope data
+	tidak direkomendasikan karena membuat kode menjadi ambigu
+	format:
+		const person = {
+			firstName: "Nur",
+			lastName: "Arifin"
+		};
+		
+		with (person) {
+			console.info(firstName);
+			console.info(lastName);
+		};
+29. Function =>
+	blok kode program yang akan berjalan saat dipanggil
+	contoh:
+		// membuat function
+		function helloWorld() {
+			console.info("Hello World!");
+		}
+		
+		// memanggil function
+		helloWorld();
+		// boleh berkali kali
+	- parameter =>
+		terletak di dalam ()
+		bisa lebih dari satu, jika lebih dari satu pisahkan dengan ,
+		contoh:
+			// membuat function dengan parameter
+			function sayWorld(firstName, lastName) {
+				console.info(`Hello ${firstName} ${lastName}`);
+			}
+			
+			// memanggil function parameter
+			sayWorld("Eko", "Khannedy");
+	- return value =>
+		mengembalikan value, lalu diikuti dengan data yang kita inginkan
+		contoh:
+			// membuat function dengan parameter & return value
+			function myAge(hariIni, hariBesok) {
+				const umur = `${hariIni} ${hariBesok}`;
+				
+				return umur;
+			}
+			
+			// memanggil function dan menangkap return value nya
+			const result = myAge("Senin", "Selasa");
+			console.info(result);
+	- return value lebih dari satu =>
+		function getFinal(value) {
+			if (value > 90) {
+				return "A";
+			} else if (value > 80) {
+				return "B";
+			} else if (value > 70) {
+				return "C";
+			} else if (value > 60) {
+				return "D";
+			} else {
+				return "E";
+			}
+		}
+	- menghentikan eksekusi dengan return =>
+		kode setelah return tidak akan di eksekusi
+	- opsional parameter =>
+		parameter di function itu tidak wajib
+		jika tidak ada value yang memenuhi parameter, secara default
+		nilai function nya undefined
+		jika nilai value parameter melebihi parameter, maka akan diabaikan
+	- default parameter =>
+		jika tidak ada data yang di kirim oleh parameter, maka default
+		parameter akan digunakan sebagai default value
+		contoh:
+			function register(name, age = 17) {
+				console.info(name);
+				console.info(age);
+			}
+			
+			register("ipincamp") // nanti, age nya diisi 17 sebagai default
+			/*
+			jika parameter yang dikirim adalah undefined, age diisi 17
+			jika parameter yang dikirim adalah null, maka hasilnya null
+			karena null itu sudah berisi nilai namun nilainya null/kosong
+			*/
+			register("ipincamp", 20) // nilai age di parameter akan diabaikan
+	- rest parameter =>
+		fitur dimana kita bisa mengirimkan data sebanyak banyaknya pada satu parameter,
+		dan secara otomatis akan dikonversi menjadi Array
+		hanya boleh ada satu di function, tidak boleh lebih dari satu
+		berada di posisi paling akhir, tidak boleh di tengah/depan
+		kecuali hanya 1 parameter
+		contoh:
+			function sum(name, ...data) {
+				let total = 0;
+				for (const item of data) {
+					total += item;
+				}
+				console.info(`Total ${name} is ${total}`);
+			}
+			
+			sum("Duit", 12, 12, 32, 23, 123, 34);
+	- spread syntax =>
+		jika terlanjut sudah memiliki array,
+		kita bisa mengirimkan array ke rest parameter
+		format:
+			function sum(name, ...data) {
+				let total = 0;
+				for (const item of data) {
+					total += item;
+				}
+				console.info(`Total ${name} is ${total}`);
+			}
+			
+			sum("Duit", ...[12, 12, 32, 23, 123, 34]); // tambahkan titik 3
+	- function di variable =>
+		function sayHello(name) {
+			console.info(`Hello ${name}!`);
+		}
+		
+		let say = sayHello;
+		
+		say("ipincamp");
+	- function di parameter =>
+		let say = sayHello;
+		
+		function gimmeName(callback) {
+			callback("ipincamp");
+		}
+		
+		gimmeName(say);
+	- anonymous function =>
+		function tanpa nama/anonymous
+		misal isi function sangat sederhana, gunakan saja ini
+		- pada variable
+			format:
+				let say = function (name) {
+					console.info(`Hello ${name}`);
+				}
+				
+				say("ipincamp");
+		- pada parameter
+			format:
+				function gimmeName(callback) {
+					callback("ipincamp");
+				}
+				
+				gimmeName(function (name) {
+					console.info(`Hello ${name}`);
+				});
+	- function di dalam function =>
+		function yang terdapat di dalam function disebut inner function
+		inner function tidak bisa diakses dari luar
+		contoh:
+			function outer() {
+				function inner() {
+					console.info("Inner");
+				}
+				
+				inner(); // bisa dipanggil karena di dalam function tersebut
+			}
+			
+			outer();
+			
+			// jika ingin memanggil function inner, maka akan terjadi error
+30. Scope =>
+	ada 2 jenis, global scope dan local scope
+	global scope bisa di akses di local scope,
+	namun local scope hanya bisa di akses di local scope tersebut
+	format:
+		// global scope
+		let counter = 0;
+		
+		function hitMe() {
+			// local scope
+		}
+		
+		hitMe()
+		
+		function first() {
+			// local scope
+			let nameFirst = "ipincamp";
+		}
+		
+		function second() {
+			// local scope
+			let nameSecond = "ipin";
+		}
+		
+		first();
+		second();
+		
+		console.info(nameFirst); // ini akan error
+		console.info(nameSecond); // ini juga error karena mencoba akses local scope
+	- nested function scope =>
+		function first() {
+			let firstVariable = "Name";
+			
+			function second() {
+				let nameD = "ipincamp";
+				console.info(firstVariable); // ini bisa karena local scope
+			}
+			
+			/*
+			namun jika ingin mengambil variable nameD, akan error
+			*/
+			
+			second();
+		}
+		
+		first();
+	- factorial recursive =>
+		memanggil function dirinya sendiri
+		function facRec(value) {
+			if (value === 1) {
+				return 1;
+			} else {
+				return value * facRec(value - 1);
+			}
+		}
+31. Function Generator =>
+	digunakan untuk membuat data generator
+	bisa di iterasi seperti array
+	format:
+		function* createNames() {
+			yield "Nur";
+			yield "Arifin"
+		}
+		
+		const names = createNames();
+		for (const name of names) {
+			console.info(name);
+		}
+		
+		// Contoh Complex
+		function* nomorGanjil(value) {
+			for (const i = 1; i <= value; i++) {
+				if (i % 2 === 1) {
+					yield 1;
+				}
+			}
+		}
+		
+		const numbers = nomorGanjil(100);
+		for (const number of numbers) {
+			console.info(number);
+		}
+	- Lazy Evaluation =>
+		jika kita tidak mengambil data dari generator, maka yield selanjutnya
+		tidak akan di eksekusi
+32. Arrow Function =>
+	mirip anonymous function
+	alternatif pembuatan function sederhana dari function biasanya
+	kekurangannya:
+		- tidak memiliki fitur argument object
+		- tidak mendukung function generator
+		- tidak bisa mengakses this (OOP)
+		- tidak bisa mengakses super (OOP)
+	format:
+		const sayHello = (name) => {
+			const say = `Hello ${name}`;
+			console.info(say);
+		}
+		
+		sayHello("ipincamp");
+	- arrow function tanpa block =>
+		misalkan isinya sangat sederhana(satu baris)
+		format:
+			const sayHello = (name) => console.info(`Hello ${name});
+			
+			sayHello("ipincamp");
+	- arrow function return value =>
+		bisa mengembalikan value seperti function biasanya
+		jika menggunakan block, perlu kata kunci return
+		jika tidak menggunakan block, tidak perlu menggunakan return
+		format:
+			// block
+			const sum = (first, second) => {
+				return first + second;
+			}
+			
+			console.info(sum(100, 100));
+			
+			// satu baris
+			
+			const sum = (first, second) => first + second;
+			
+			console.info(sum(100, 100));
+	- arrow function tanpa kurung parameter =>
+		const sayHello = name => console.info(`Hello ${name}`);
+		
+		sayHello("ipincamp");
+	- arrow function sebagai parameter function =>
+		format:
+			function gimmeName(callback) {
+				callback("ipincamp");
+			}
+			
+			gimmeName((name) => console.info(`Hello ${name}!`));
+			gimmeName(name => console.info(`Hello ${name}!`));
+33. Closure =>
+	meng bundle variable di local scope ke luar scopenya
+	kita bisa membuat sebuah function di local scope dan referensi ke data
+	disekitar local scope tersebut, keluar scope nya(global)
+	format:
+		function adder(value) {
+			const owner = "ipincamp";
+			
+			function add(param) {
+				console.info(owner);
+				return value + param;
+			}
+			
+			return add; // ini akan dikeluarkan
+		}
+		
+		const addTwo = adder(2);
+		/*
+		seakan akan seperti ini:
+		function addTwo(param) {
+			console.info("ipincamp");
+			return 2 + param;
+		}
+		*/
+34. Object Method =>
+	cara pembuatannya sama dengan function sebagai value
+	format:
+		/*
+		function sayHello(name) {
+			console.info(`Hello ${name}`);
+		}
+		*/
+	
+		const person = {
+			name: "ipincamp",
+			sayHello: function (name) {
+				console.info(`Hello ${name}`);
+			}
+			// sayHello: sayHello
+		};
+		
+		person.sayHello("ipincamp");
+	- menambah method ke object =>
+		person.sayHello = function (name) {
+			console.info(`Hello ${name}`);
+		}
+		
+		person.sayHello("ipincamp");
+35. This =>
+	referensi ke object milik siapa
+	- this di global scope =>
+		contoh:
+			console.info(this);
+			
+			function sample() {
+				console.info(this);
+				
+				function inner() {
+					console.info(this);
+				}
+				
+				inner();
+			}
+			
+			sample();
+		// kalo di object method, this akan menjadi object pemilik function
+36. Arrow Function di object =>
+	tidak mengakses this
+	tidak mengakses data generator, argument object
+	tapi masih bisa menggunakan arrow function
+37. Getter & Setter =>
+	getter: mengambil data di object
+	setter: mengubah data di object
+	kita bisa melakukan hal apapun dalam function sebelum sebuah properti diubah/akses
+	misalkan validasi dll.
+	contoh getter:
+		const person = {
+			name: "ipincamp",
+			number: "lima",
+			get fullName() {
+				return `${this.name} ${this.number}`;
+			}
+		};
+		
+		// otomatis memanggil fullName()
+		console.info(person.fullName)
+	contoh setter:
+		const person = {
+			name: "ipincamp",
+			number: "lima",
+			get fullName() {
+				return `${this.name} ${this.number}`;
+			},
+			set fullName(value) {
+				const array = value.split(" ");
+				this.name = array[0];
+				this.number = array[1];
+			}
+		};
+		
+		person.fullName = "Nur Arifin";
+38. Destructuring =>
+	mengekstrak data di dalam array ke variable
+	nomor index
+	contoh:
+		const listArray = ["Nur", "Arifin", "Jatisaba", "Jawa Tengah", "Indonesia"];
+		
+		const [firstName, middleName, lastName, ...others] = names;
+		
+		
+		console.info(firstName);
+		console.info(middleName);
+		console.info(lastName);
+		console.info(others); // akan di simpan jadi array kembali
+	contoh di object:
+	properti
+		const listObject = {
+			firstName: "Nur",
+			lastName: "Arifin",
+			address: {
+				street: "blm ada",
+				city: "jakarta"
+			},
+			hobby: "Gamers"
+		};
+		
+		const {firstName, lastName, ...others} = listObject;
+		
+		console.info(firstName);
+		console.info(lastName);
+		console.info(others);
+	- destructuring nested object =>
+		const {firstName, lastName, address: {street, city}, ...others} = listObject;
+		
+		console.info(firstName);
+		console.info(lastName);
+		console.info(street);
+		console.info(city);
+		console.info(others);
+	- destructuring function parameter =>
+		ketika ingin mengambil nested data dalam array/object dalam function
+		contoh 1:
+			function displayPerson({firstName, lastName}) {
+				console.info(firstName);
+				console.info(lastName);
+			}
+			
+			const person = {
+				firstName: "Nur",
+				lastName: "Arifin",
+			};
+			
+			displayPerson(person);
+		contoh 2:
+			function sum([first, second]) {
+				return first + second;
+			}
+			
+			console.info(sum([10, 23]));
+			console.info(sum([2, 12]));
+	- default value =>
+		jika kita melakukan destructuring terhadap array/object, ternyata datanya tidak ada
+		maka kita dapat menambahkan default value nya
+		contoh:
+			const listArray = ["Nur", "Arifin"];
+			/*
+			jika ada datanya, maka data akan dipakai,
+			jika kosong, maka default value akan dipakai
+			*/
+		
+			const [firstName, middleName, lastName = "Indonesia"] = names;
+			
+			
+			console.info(firstName);
+			console.info(middleName);
+			console.info(lastName);
+	- menggunakan nama variable lain =>
+		contoh:
+			const {
+				firstName: namaDepan,
+				middleName: namaTengah = "Gada",
+				lastName: namaBelakang
+			} = person;
+			
+			console.info(namaDepan);
+			console.info(namaTengah);
+			console.info(namaBelakang);
+39. Strict Mode =>
+	pada ECMAScript 5 mulai diperkenalkan strict mode
+	referensi: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_Mode/Transitioning_to_strict_mode
+	- cara menyalakan strict mode:
+		tambahkan 'use strict' pada baris awal JavaScript
+		atau ditambahkan di awal sebuah function
+		contoh:
+			function useStrict() {
+				'use strict'; // error yang tidak direkomendasikan untuk digunakan
+				const person = {
+					name: "ipincamp"
+				}
+				
+				// ini akan error
+				with (person) {
+					console.info(name);
+				}
+			}
+			
+			useStrict();
+40. Debugger =>
+	proses mencari bug(masalah)
+	kata kunci nya: debugger;
+	contoh:
+		function createNames(firstName, lastName) {
+			debugger;
+			
+			const fullName = `${firstName} ${lastName}`;
+			return fullName;
+		}
+		
+		createNames("Nur", "Arifin");
