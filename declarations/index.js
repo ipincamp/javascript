@@ -1,15 +1,15 @@
 /**
- * @name variables
- * @version v0.0.2
+ * @name declare-variables
+ * @version v0.0.1
  * @author ipincamp <support@nur-arifin.my.id>
  * @license GPL-3.0
  */
 
 /*
 Ada 3 kata kunci untuk variable di JavaScript
-- var       Sudah ditinggalkan.
-- let       Nilainya bisa diubah.
-- const     Tidak bisa diubah nilainya.
+- var
+- let
+- const
 */
 
 /*
@@ -46,18 +46,3 @@ console.log(shortName);
 console.log($myAddress);
 console.log(_favorite);
 console.log(hope2022);
-
-/*
-Mengubah nilai suatu variable
-
-Ini hanya berlaku untuk kata kunci "let"
-*/
-fullname = "Nur Arifin";
-
-console.log(fullname);
-
-// Mengubah Nilai Variable yang kosong
-let myHobby;
-myHobby = "Coding";
-
-console.log(myHobby);
