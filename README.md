@@ -1,14 +1,26 @@
-<h2><center>JavaScript</center></h2>
-<h3>Basic JavaScript Class By ipincamp</h3>
+<h1><center>Basic JavaScript Class</center></h1>
+<h2>Data Types</h2>
 
-<h3>About</h3>
+Tipe data merupakan hal yang penting dalam bahasa pemprograman. <br>
+Berikut tipe data yang didukung oleh JavaScript:
+* Number
+* String
+* Boolean
+* Null
+* Undefined
+* Symbol
+* NaN
+* Object
+* Array
 
+<h2>About</h2>
+
+```txt
+Editor : ipincamp
+Tools  : Visual Studio Code
+Source : w3schools
 ```
-Developer : ipincamp
-Tools     : Visual Studio Code
-Source    : https://w3schools.com/
-```
 
-<h3>License</h3>
+<h2>License</h2>
 
 This project under [GPL-3.0](https://github.com/ipincamp/javascript/blob/main/LICENSE).
