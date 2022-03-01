@@ -59,6 +59,3 @@ Escape Sequence
 */
 
 console.log("Hello World!");
-
-// Untuk element HTML
-document.writeln("<p>Hello World!</p>");
