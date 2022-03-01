@@ -1,12 +1,7 @@
 <h1><center>Basic JavaScript Class</center></h1>
-<h2>Hello World</h2>
+<h2>Variables</h2>
 
-Yang biasanya dilakukan ketika ingin belajar bahasa program baru adalah membuat hello world.
-
-Sebenarnya bukan itu, kita harus memahami terlebih dahulu sifat, karakter & aturan dalam
-penulisan/pembuatan bahasa program tersebut.
-
-Cabang ini akan memberikan contoh pembuatan hello world & beberapa opsi yang harus konsisten di JavaScript.
+Variabel adalah sebuah nama yang mewakili sebuah nilai. Variabel bisa diisi dengan berbagai macam nilai seperti string (teks), number (angka), objek, array, dan sebagainya. Kita bisa ibaratkan, variabel itu seperti wadah untuk menyimpan sesuatu.
 
 <br><br><br><br>
 
