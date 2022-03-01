@@ -1,5 +1,5 @@
-<h2><center>JavaScript Course</center></h2>
-<p><center>by ipincamp</center></p>
+<h2><center>JavaScript</center></h2>
+<h3>Basic JavaScript Class By ipincamp</h3>
 
 <h3>About</h3>
 
@@ -9,9 +9,6 @@ Tools     : Visual Studio Code
 Source    : https://w3schools.com/
 ```
 
-<h3>List Course</h3>
+<h3>License</h3>
 
-* Hello World
-* Variables
-* Operators
-* Soon :D
+This project under [GPL-3.0](https://github.com/ipincamp/javascript/blob/main/LICENSE).
