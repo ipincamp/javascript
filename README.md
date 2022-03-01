@@ -8,8 +8,6 @@ penulisan/pembuatan bahasa program tersebut.
 
 Cabang ini akan memberikan contoh pembuatan hello world & beberapa opsi yang harus konsisten di JavaScript.
 
-<br><br><br><br>
-
 <h2>About</h2>
 
 ```txt
