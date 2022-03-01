@@ -1,9 +1,8 @@
 <h1><center>Basic JavaScript Class</center></h1>
+
 <h2>Variables</h2>
 
-Variabel adalah sebuah nama yang mewakili sebuah nilai. Variabel bisa diisi dengan berbagai macam nilai seperti string (teks), number (angka), objek, array, dan sebagainya. Kita bisa ibaratkan, variabel itu seperti wadah untuk menyimpan sesuatu.
-
-<br><br><br><br>
+Variabel adalah sebuah nama yang mewakili sebuah nilai. Variabel bisa diisi dengan berbagai macam tipe data seperti string (teks), number (angka), objek, array, dan sebagainya. Kita bisa ibaratkan, variabel itu seperti wadah untuk menyimpan sesuatu.
 
 <h2>About</h2>
 
