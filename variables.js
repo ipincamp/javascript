@@ -1,6 +1,6 @@
 /**
  * @name variables
- * @version v0.0.1
+ * @version v0.0.2
  * @author ipincamp <support@nur-arifin.my.id>
  * @license GPL-3.0
  */
@@ -37,3 +37,27 @@ let shortName = "ipin";
 let $myAddress = "Indonesia";
 let _favorite = "Cat";
 let hope2022 = "Full Stack Developer";
+
+/*
+Mengakses Variable
+*/
+console.log(fullname);
+console.log(shortName);
+console.log($myAddress);
+console.log(_favorite);
+console.log(hope2022);
+
+/*
+Mengubah nilai suatu variable
+
+Ini hanya berlaku untuk kata kunci "let"
+*/
+fullname = "Nur Arifin";
+
+console.log(fullname);
+
+// Mengubah Nilai Variable yang kosong
+let myHobby;
+myHobby = "Coding";
+
+console.log(myHobby);
