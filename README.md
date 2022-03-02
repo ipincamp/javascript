@@ -3,15 +3,26 @@
 
 Tipe data merupakan hal yang penting dalam bahasa pemprograman. <br>
 Berikut tipe data yang didukung oleh JavaScript:
-* Number
-* String
-* Boolean
-* Null
-* Undefined
-* Symbol
-* NaN
-* Object
-* Array
+
+> Primitive
+  - [X] undefined
+  - [X] boolean
+  - [X] Number
+  - [ ] BigInt
+  - [ ] String
+  - [ ] Symbol
+
+> Null
+
+> Object
+
+> Function
+
+> Data Structures
+  - [ ] Array
+  - [ ] Map / Weak Map
+  - [ ] Set / Weak Set
+  - [ ] Date
 
 <h2>About</h2>
 
