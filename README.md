@@ -4,6 +4,8 @@
 
 Variabel adalah sebuah nama yang mewakili sebuah nilai. Variabel bisa diisi dengan berbagai macam tipe data seperti string (teks), number (angka), objek, array, dan sebagainya. Kita bisa ibaratkan, variabel itu seperti wadah untuk menyimpan sesuatu.
 
+Ada juga Scope dan Hoisting.
+
 <h2>About</h2>
 
 ```txt
